@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>documentary on rome </title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=IM+Fell+English:400i" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+</head>
+<body>
+	<center>
+		<div id="divbuttons">
+			<ul id="navbar">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="history.html">History</a></li>
+				<li><a href="landmarks.html">Landmarks</a></li>
+				<li><a href="travel.html">Travel Guide</a></li>
+			</ul>
+		</div>
+		<h1>
+			Landmarks
+		</h1>
+	</center>
+			
+		<br>
+
+				
+
+
+	<div id="landmarks">
+		<p>The Colosseum is one of Rome's many awesome landmarks! The Colosseum is one of the oldest ruins in ancient Rome. The Roman Forum is also one of the most popular tourist destinations in ancient Rome. The Fourm also is over two thousand years old.Rome has many awesome landmarks, For example there is the colosseum, the Parthenon and the Roman forum. These are from 8th century BC. The Roman Empire has some of the oldest artifacts of this planet! Some of ancient Rome still stands today. Rome is also known to fight with the greeces and the Persians over land, Gods, etc. Rome was at its highest about 12% of the world population. Overall, Rome is one of the most beautiful places on planet earth!</p>
+	</div>
+	<div id="landmarks-quiz">
+		<div class="slideshow-container slide">
+		  <div class="mySlides fade slide">
+		    <div class="numbertext slide">1 / 3</div>
+		    <img src="img/1.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides fade slide">
+		    <div class="numbertext slide">2 / 3</div>
+		    <img src="img/2.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides fade slide">
+		    <div class="numbertext slide">3 / 3</div>
+		    <img src="img/3.jpg" style="width:100%">
+		  </div>
+
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<div class="slide" style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+	</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
